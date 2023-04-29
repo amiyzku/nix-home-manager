@@ -3,6 +3,7 @@
 {
   # ユーザ名
   home.username = builtins.getEnv "USER";
+
   # ホームディレクトリ
   home.homeDirectory = builtins.getEnv "HOME"; 
 
@@ -23,6 +24,7 @@
     pkgs.fzf
     pkgs.zoxide
     pkgs.rustup
+    pkgs.neovim
   ];
 
   # ホームディレクトリ配下にファイルを配置する
@@ -38,7 +40,6 @@
 
   # 環境変数 
   home.sessionVariables = {
-    SHELL = "${config.home.profileDirectory}/bin/fish";
   };
 
   # 設定ありでインストールするパッケージは`programs.<パッケージ名>`として設定

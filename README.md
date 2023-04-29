@@ -20,10 +20,12 @@ home-manager switch
 # Links
 ### Nix
 [Nix Packages](https://search.nixos.org/packages "Nix package search")
+
 [Nix Reference Manual](https://nixos.org/manual/nix/stable/introduction.html "Nix Reference Manual")
 
 ### Home Manager 
 [Home Manager Manual](https://nix-community.github.io/home-manager/index.html "Home Manager Manual")
+
 [Home Manager Appendix A. Configuration Options](https://rycee.gitlab.io/home-manager/options.html "Home Manager Appendix A. Configuration Options")
 
 ### Others

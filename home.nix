@@ -7,8 +7,8 @@
   # ホームディレクトリ
   home.homeDirectory = builtins.getEnv "HOME"; 
 
-  # home-managerのバージョン。破損を防ぐのに役立つ。
-  home.stateVersion = "22.11"; # Please read the comment before changing.
+  # 設定オプションの互換性を維持するためのバージョン。破損を防ぐのに役立つ。
+  home.stateVersion = "22.11";
 
   # 設定なしでインストールすれば良いだけのパッケージはここに記述
   home.packages = [

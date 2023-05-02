@@ -24,6 +24,7 @@
     pkgs.zoxide
     pkgs.rustup
     pkgs.neovim
+    pkgs.nnn
   ];
 
   # ホームディレクトリ配下にファイルを配置する

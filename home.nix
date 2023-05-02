@@ -13,7 +13,6 @@
   # 設定なしでインストールすれば良いだけのパッケージはここに記述
   home.packages = [
     pkgs.htop
-    pkgs.fish
     pkgs.bat
     pkgs.git
     pkgs.starship

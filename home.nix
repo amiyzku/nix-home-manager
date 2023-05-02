@@ -25,6 +25,7 @@
     pkgs.rustup
     pkgs.neovim
     pkgs.nnn
+    pkgs.fish
   ];
 
   # ホームディレクトリ配下にファイルを配置する

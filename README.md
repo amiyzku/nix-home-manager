@@ -1,6 +1,7 @@
 # How to setup
 ```bash
 ./setup.sh
+ln -snf $HOME/.nix-profile/bin/fish /usr/local/bin/fish
 ```
 
 # Workflow

@@ -11,6 +11,8 @@
   home.stateVersion = "22.11";
 
   # 設定なしでインストールすれば良いだけのパッケージはここに記述
+  # 現在のユーザに対してインストールされる
+  # システム全体にインストールする場合は /etc/nix/nix.conf に記載する
   home.packages = [
     pkgs.htop
     pkgs.bat

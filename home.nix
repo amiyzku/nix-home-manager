@@ -28,6 +28,7 @@
     pkgs.neovim
     pkgs.nnn
     pkgs.fish
+    pkgs.ripgrep
   ];
 
   # ホームディレクトリ配下にファイルを配置する

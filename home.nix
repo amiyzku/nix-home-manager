@@ -29,7 +29,11 @@
     pkgs.nnn
     pkgs.fish
     pkgs.ripgrep
-  ];
+  ] ++ (if builtins.currentSystem == "x86_64-linux" then [
+    pkgs.sysz
+  ] else [
+
+  ]);
 
   # ホームディレクトリ配下にファイルを配置する
   # 一般的なユースケースはdotfilesを配置
@@ -50,6 +54,7 @@
   # programs空間で利用可能なパッケージ：https://github.com/nix-community/home-manager/tree/master/modules/programs
   programs.home-manager.enable = true;
 }
+
 
 # ++++++++++++++++++++++++++++++++++++++++++++++
 # Memo
@@ -72,17 +77,6 @@
 #   package = fishPkg.fish;
 #   ...
 # }
-#
-# [OSによってインストールするパッケージを指定する]
-# 1.以下のようなコードをスコープ外に記述
-#　let
-#  osSpecificPackages = if config.system.isLinux then
-#    with pkgs; [ htop neovim ]
-#  else if config.system.isDarwin then
-#    with pkgs; [ htop macvim ]
-#  else
-#    [];
-# in
 #
 # [programsでインストールと設定を行う方法]
 # programs.git = {

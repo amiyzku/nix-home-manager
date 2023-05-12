@@ -28,3 +28,13 @@ home-manager switch
 
 ### Others
 [Nixを使うと何が嬉しいのか](https://scrapbox.io/mrsekut-p/Nix%E3%82%92%E4%BD%BF%E3%81%86%E3%81%A8%E4%BD%95%E3%81%8C%E5%AC%89%E3%81%97%E3%81%84%E3%81%AE%E3%81%8B "Nixを使うと何が嬉しいのか")
+
+# Info
+### How to search available options
+1. nix repl
+```bash
+
+nix repl
+
+```
+

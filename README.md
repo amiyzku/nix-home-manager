@@ -5,35 +5,35 @@
 ### non NixOS
 
 ```bash
+
 ./setup.sh
-ln -snf $HOME/.nix-profile/bin/fish /usr/local/bin/fish
+ln -snf $(which fish) /usr/local/bin/fish
+
 ```
 
 ### NixOS
 
 ```bash
+
 ./setup-for-nixos.sh
-ln -snf $HOME/.nix-profile/bin/fish /usr/local/bin/fish
+ln -snf $(which fish) /usr/local/bin/fish
+
 ```
 
 ## Edit
 
-### non NixOS
-
 ```bash
-vim ~/.config/home-manager/home.nix
-```
 
-### NixOS
+home-manager edit
 
-```bash
-vim ~/.config/nixpkgs/home.nix
 ```
 
 ## apply
 
 ```bash
+
 home-manager switch
+
 ```
 
 # Links

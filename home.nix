@@ -29,6 +29,8 @@
     pkgs.nnn
     pkgs.fish
     pkgs.ripgrep
+    pkgs.onefetch
+    pkgs.gping
   ] ++ (if builtins.currentSystem == "x86_64-linux" then [
     pkgs.sysz
   ] else [

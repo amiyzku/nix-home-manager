@@ -27,7 +27,6 @@
     pkgs.rustup
     pkgs.neovim
     pkgs.nnn
-    pkgs.fish
     pkgs.ripgrep
     pkgs.onefetch
     pkgs.gping
@@ -55,6 +54,9 @@
   # 設定ありでインストールするパッケージは`programs.<パッケージ名>`として設定
   # programs空間で利用可能なパッケージ：https://github.com/nix-community/home-manager/tree/master/modules/programs
   programs.home-manager.enable = true;
+
+  # home-managerに管理させることで、余計なトラブルを減らす
+  programs.fish.enable = true;
 }
 
 

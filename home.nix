@@ -5,7 +5,7 @@
   home.username = builtins.getEnv "USER";
 
   # ホームディレクトリ
-  home.homeDirectory = builtins.getEnv "HOME"; 
+  home.homeDirectory = builtins.getEnv "HOME";
 
   # 設定オプションの互換性を維持するためのバージョン。破損を防ぐのに役立つ。
   home.stateVersion = "22.11";
@@ -13,32 +13,34 @@
   # 設定なしでインストールすれば良いだけのパッケージはここに記述
   # 現在のユーザに対してインストールされる
   # システム全体にインストールする場合は /etc/nix/nix.conf に記載する
-  home.packages = [
-    pkgs.htop
-    pkgs.bat
-    pkgs.git
-    pkgs.starship
-    pkgs.lsd
-    pkgs.delta
-    pkgs.zellij
-    pkgs.chezmoi
-    pkgs.fzf
-    pkgs.zoxide
-    pkgs.rustup
-    pkgs.neovim
-    pkgs.nnn
-    pkgs.ripgrep
-    pkgs.onefetch
-    pkgs.gping
+  home.packages = with pkgs; [
+    fish
+    htop
+    bat
+    git
+    starship
+    lsd
+    delta
+    zellij
+    chezmoi
+    fzf
+    zoxide
+    rustup
+    neovim
+    nnn
+    ripgrep
+    onefetch
+    gping
+    procs
   ] ++ (if builtins.currentSystem == "x86_64-linux" then [
-    pkgs.sysz
+    sysz
   ] else [
 
   ]);
 
   # ホームディレクトリ配下にファイルを配置する
   # 一般的なユースケースはdotfilesを配置
-  # ```例 
+  # ```例
   # home.file = {
   #   ".vimrc".source = ./.vimrc;
   #   ".bashrc".source = ./.bashrc;
@@ -47,16 +49,13 @@
   home.file = {
   };
 
-  # 環境変数 
+  # 環境変数
   home.sessionVariables = {
   };
 
   # 設定ありでインストールするパッケージは`programs.<パッケージ名>`として設定
   # programs空間で利用可能なパッケージ：https://github.com/nix-community/home-manager/tree/master/modules/programs
   programs.home-manager.enable = true;
-
-  # home-managerに管理させることで、余計なトラブルを減らす
-  programs.fish.enable = true;
 }
 
 

@@ -28,7 +28,7 @@ home-manager edit
 
 ```
 
-## apply
+## apply & Update packages
 
 ```bash
 

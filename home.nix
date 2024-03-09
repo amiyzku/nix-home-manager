@@ -23,7 +23,6 @@ in
     htop
     bat
     git
-    starship
     lsd
     delta
     zellij

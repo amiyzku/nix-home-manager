@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 
+let
+  pkgsUnstable = import <nixpkgs-unstable> {};
+in
+
 {
   # ユーザ名
   home.username = builtins.getEnv "USER";
@@ -13,7 +17,7 @@
   # 設定なしでインストールすれば良いだけのパッケージはここに記述
   # 現在のユーザに対してインストールされる
   # システム全体にインストールする場合は /etc/nix/nix.conf に記載する
-  home.packages = with pkgs; [
+  home.packages = with pkgsUnstable; [
     fish
     htop
     bat
@@ -32,6 +36,7 @@
     onefetch
     gping
     procs
+    bottom
   ] ++ (if builtins.currentSystem == "x86_64-linux" then [
     sysz
   ] else [

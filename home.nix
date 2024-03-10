@@ -37,10 +37,13 @@ in
     gping
     procs
     bottom
-  ] ++ (if builtins.currentSystem == "x86_64-linux" then [
+  ] ++ (
+    if builtins.currentSystem == "x86_64-linux" then [
     sysz
+  ] else if builtins.currentSystem == "aarch64-darwin" then [
+    alacritty    
   ] else [
-
+    
   ]);
 
   # ホームディレクトリ配下にファイルを配置する

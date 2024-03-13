@@ -37,11 +37,14 @@ in
     gping
     procs
     bottom
+    jq
   ] ++ (
     if builtins.currentSystem == "x86_64-linux" then [
     sysz
   ] else if builtins.currentSystem == "aarch64-darwin" then [
-    alacritty    
+    alacritty
+    alt-tab-macos
+    postman
   ] else [
     
   ]);

@@ -40,6 +40,7 @@ in
     jq
     libuchardet
     fd
+    just
   ] ++ (
     if builtins.currentSystem == "x86_64-linux" then [
     sysz

@@ -41,6 +41,8 @@ in
     libuchardet
     fd
     just
+    gh
+    ghq
   ] ++ (
     if builtins.currentSystem == "x86_64-linux" then [
     sysz

@@ -43,9 +43,10 @@ in
     just
     gh
     ghq
+    direnv
   ] ++ (
-    if builtins.currentSystem == "x86_64-linux" then [
-    sysz
+    if builtins.currentSystem == "aarch64-linux" then [
+    unzip
   ] else if builtins.currentSystem == "aarch64-darwin" then [
     alacritty
     alt-tab-macos

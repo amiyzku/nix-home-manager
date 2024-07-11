@@ -44,6 +44,8 @@ in
     gh
     ghq
     direnv
+    irust
+    dust
   ] ++ (
     if builtins.currentSystem == "aarch64-linux" then [
     unzip
